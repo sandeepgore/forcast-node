@@ -17,8 +17,8 @@ const infoToday = ((lan,lat, callback) => {
                      callback('',
                             'Today:  '+body.hourly.summary+
                             '  temperature '+temperature+" degrees out. "+ " There is  "+ 
-                            +precipProbability+'% '+ ' chances of rain. '+ "Min temparature is "+temperatureHigh +" degrees and "
-                            +" max temperature is "+temperatureLow+" degrees out. "
+                            +precipProbability+'% '+ ' chances of rain. '+ "Max temparature is "+temperatureHigh +" degrees and "
+                            +" min temperature is "+temperatureLow+" degrees out. "
                            
                      
               )
