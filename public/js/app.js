@@ -1,7 +1,3 @@
-console.log("javascript file in client side")
-
-
-
 const form1 = document.querySelector('form')
 form1.addEventListener('submit', (event) => {
 
