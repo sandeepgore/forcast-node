@@ -13,10 +13,12 @@ const infoToday = ((lan,lat, callback) => {
                  callback('can not find coordinates',{})
               } else{
                      const {temperature,precipProbability}=body.currently
+                     const {temperatureHigh,temperatureLow}=body.daily.data[0]
                      callback('',
                             'Today:  '+body.hourly.summary+
                             '  temperature '+temperature+" degrees out. "+ " There is  "+ 
-                            +precipProbability+'% '+ ' chances of rain ',
+                            +precipProbability+'% '+ ' chances of rain. '+ "Min temparature is "+temperatureHigh +" degrees and "
+                            +" max temperature is "+temperatureLow+" degrees out. "
                            
                      
               )

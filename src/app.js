@@ -69,6 +69,8 @@ app.get('/weather', (req, res) => {
                             forcast:data,
                             location,
                             address:req.query.address
+
+                        
                         })
                    })
            })
