@@ -15,8 +15,8 @@ const infoToday = ((lan,lat, callback) => {
                      const {temperature,precipProbability}=body.currently
                      callback('',
                             'Today:  '+body.hourly.summary+
-                            '  temperature '+temperature+" degrees out. "+ " and "+ 
-                            '  rain chances '+precipProbability+'%',
+                            '  temperature '+temperature+" degrees out. "+ " There is  "+ 
+                            +precipProbability+'% '+ ' chances of rain ',
                            
                      
               )
