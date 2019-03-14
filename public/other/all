@@ -1,0 +1,44 @@
+const path = require('path')
+const express = require('express');
+const app = express()
+
+//console.log(__dirname)
+//console.log(__filename)
+//console.log(path.join(__dirname,'../public'))
+const pubDirPath = (__dirname, '../public')
+app.use(express.static(path.join(pubDirPath)))
+
+// const helpPath = (__dirname, '../help.html')
+// const aboutPath=(__dirname,'../public/about.html')
+//app.use(express.static(path.join(helpPath)))
+//app.use(express.static(path.join(aboutPath)))
+// app.get('', (req, res) => {
+//        res.send('<h1>weather</h1>');
+
+// })
+
+// app.get('/help', (req, res) => {
+
+//        // app.use(express.static(path.join(helpPath)))
+         
+//        // res.send([{
+//        //        name: 'sandeep'
+//        //        , age: 22
+//        // }, {
+//        //        name: 'priya',
+//        //        age: 19
+//        // }])
+// })
+
+// app.get('/about', (req, res) => {
+//        res.send("<h1>about my weather app</h1>")
+
+// })
+
+app.get('/weather', (req, res) => {
+       res.send({ forcast: 'city', location: 'city' })
+})
+
+app.listen(3000, () => {
+       console.log("i'm in port 3000")
+})
